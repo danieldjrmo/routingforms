@@ -1,0 +1,15 @@
+<form (ngSubmit)="enviar()" #form="ngForm">
+    <input name="name" [(ngModel)]="name" placeholder="Ingrese Texto" required />
+    <button type="submit" [disabled]="form.invalid">Ingresar</button>
+</form>
+
+<div style=" display: flex; padding-top: 8px;">
+    <div class="celda">Id</div>
+    <div class="celda">Nombre</div>
+</div>
+@for (txtForm of textosForm; track txtForm.id) {
+<div style=" display: flex;">
+    <div class="celda">{{txtForm.id}}</div>
+    <div class="celda">{{txtForm.name}}</div>
+</div>
+}

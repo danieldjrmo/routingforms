@@ -1,0 +1,16 @@
+<form [formGroup]="profileForm" (ngSubmit)="enviar()">
+  <input formControlName="email" placeholder="Ingrese email" />
+  <button type="submit" [disabled]="profileForm.invalid">Ingresar</button>
+</form>
+
+<div style="display: flex; padding-top: 8px;">
+  <div class="celda">Id</div>
+  <div class="celda">Email</div>
+</div>
+
+@for (emailForm of emailsForm; track emailForm.id) {
+<div  style="display: flex;">
+  <div class="celda">{{ emailForm.id }}</div>
+  <div class="celda">{{ emailForm.email }}</div>
+</div>
+}
