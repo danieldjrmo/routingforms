@@ -28,8 +28,8 @@ export class FormularioReactivo {
       email: this.profileForm.value.email!.trim()
     };
 
-    this.emailsForm = [...this.emailsForm, nuevaForm];
-
+    this.emailsForm.push(nuevaForm)
+    this.profileForm.reset()
   }
 
 
